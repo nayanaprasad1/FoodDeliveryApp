@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/adminpage.css')}}">
+
+</head>
+<body>
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>ADMIN  <span>DASHBOARD</span></h3>
+        <a href="/adminlogin" class="btn">Logout</a>
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- features section starts  -->
+
+<section class="features" id="features">
+
+    <h1 class="heading">  <span></span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="{{url_for('static', filename='img/feature-img-1.png')}}"alt="">
+            <h3>All Users</h3>
+            <p>Here are all the users entered</p>
+            <a href="/view" class="btn">Explore </a><br><br>
+        </div>
+
+        <div class="box">
+            <img src="{{url_for('static', filename='img/feature-img-2.png')}}" alt="">
+            <h3>Food Items</h3>
+            <p>All Food Items</p>
+            <a href="/viewProd" class="btn">Explore</a><br><br>
+        </div>
+
+        <div class="box">
+            <img src="{{url_for('static', filename='img/feature-img-3.png')}}" alt="">
+            <h3>Job Applicants </h3>
+            <p> Approval Job Applicants</p>
+            <a href="/viewseekers" class="btn">Explore</a><br><br>
+        </div>
+
+        <div class="box">
+            <img src="{{url_for('static', filename='img/feature-img-3.png')}}" alt="">
+            <h3>Customer </h3>
+            <p> Complaints/Suggestion</p>
+            <a href="/viewsupport" class="btn">Explore</a><br><br>
+        </div>
+
+         <div class="box">
+            <img src="{{url_for('static', filename='img/feature-img-3.png')}}" alt="">
+            <h3>Food delivery Details</h3>
+            <p> Ordered Records</p>
+            <a href="/viewdelivery" class="btn">Explore</a><br><br>
+        </div>
+
+         <div class="box">
+            <img src="{{url_for('static', filename='img/feature-img-3.png')}}" alt="">
+            <h3>Order History</h3>
+            <p> Order History of Customer</p>
+            <a href="/viewhistory" class="btn">Explore</a><br><br>
+        </div>
+
+
+    </div>
+
+</section>
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
+

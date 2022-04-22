@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Query Record</title>
+    <style>
+        h1{
+            color: green;
+            font-family:roboto;
+            font-size:50px;
+            text-align: center;
+        }
+        body{
+            padding:20px;
+            margin:50px;
+            background-color:lightgreen;
+            font-family:roboto;
+            text-align: center;
+            font-size:30px;
+        }
+        a{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <h2>Customer Query Registered</h2>
+    <table border=5>
+        <thead>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>City</th>
+            <th>Email</th>
+            <th>Query</th>
+        </thead>
+        {% for x in rows %}
+        <tr>
+            <td>{{x["name"]}}</td>
+            <td>{{x["number"]}}</td>
+            <td>{{x["city"]}}</td>
+            <td>{{x["email"]}}</td>
+            <td>{{x["query"]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br><br>
+    <a href="/adminhome">Go Back</a>
+    </center>
+</body>
+</html>

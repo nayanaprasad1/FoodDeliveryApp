@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+    <style>
+        h1{
+            color: green;
+            font-family:roboto;
+            font-size:50px;
+            text-align: center;
+        }
+        body{
+            padding:20px;
+            margin:50px;
+             background: linear-gradient(to right, #90EE90, #90EE90);
+            font-family:roboto;
+            text-align: center;
+            font-size:30px;
+        }
+        a{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <h2>Products Record</h2>
+    <table border=5>
+        <thead>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Image</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Deletion</th>
+            <th>Updation</th>
+        </thead>
+         <tbody>
+            <!-- For Each shirt -->
+            {% for i in range(myProuctsLen) %}
+              <tr>
+                <td>{{ myProucts[i]["id"] }}</td>
+                <td>{{ myProucts[i]["name"] }}</td>
+                <td><img src="/static/img/{{ myProucts[i]["image"] }}" width="30px" alt="{{ myProucts[i]["name"] }}" /></td>
+                <td>{{ myProucts[i]["onSalePrice"] }}</td>
+                <td>{{ myProucts[i]["kind"] }}</td>
+                <td><a href="/delPro/?id={{ myProucts[i]["id"] }}"><button type="button" ><b>Delete</b></button></a></td>
+                <td><a href="/updatePro/?id={{ myProucts[i]["id"] }}"><button type="button" ><b>Update</b></button></a></td>
+              </tr>
+            </tbody>
+            {% endfor %}
+    </table>
+    <br><br>
+
+<a href="/adminhome">Go Back</a>
+    </center>
+</body>
+</html>

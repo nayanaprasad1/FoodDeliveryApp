@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Details</title>
+    <style>
+        h2{
+            color: brown;
+            font-family:bold;
+            font-size:50px;
+            text-align: center;
+        }
+        body{
+            padding:20px;
+            margin:50px;
+             background: linear-gradient(to right, #FFA500, #FFFF00);
+            font-family:roboto;
+            text-align: center;
+            font-size:30px;
+        }
+
+         a{
+            color: black;
+        }
+        </style>
+</head>
+<body>
+    <h2>Update Product Details</h2>
+    <form action="/updateProDetails" method="POST">
+        <tr><td>Enter Product Id : <input type="number" name="id"></td></tr><br>
+        <tr><td>Enter New Name : <input type="text" name="name"></td></tr><br>
+        <tr><td>Enter New Price : <input type="text" name="price"></td></tr><br>
+        <tr><td>Enter New Category : <input type="text" name="category"></td></tr><br>
+        <tr><td><input type="submit" value="Submit"></td></tr><br>
+         </table>
+    </form>
+<a href="/adminhome">Go Back</a>
+</body>
+</html>

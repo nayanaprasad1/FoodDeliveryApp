@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HungerZarf</title>
+    <style>
+        h2{
+            color: green;
+            font-family:roboto;
+            font-size:50px;
+            text-align: center;
+        }
+        body{
+            padding:20px;
+            margin:50px;
+            background-color:lightgreen;
+            text-align: center;
+            font-size:30px;
+        }
+        a{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <h2>Delivery Details</h2>
+    <table border=5>
+        <thead>
+            <th>User Id</th>
+            <th>Name</th>
+            <th>Contact Number</th>
+            <th>Email</th>
+            <th>Delivery Date</th>
+            <th>Payment Method</th>
+            <th>Delivery Address</th>
+        </thead>
+        {% for x in rows %}
+        <tr>
+            <td>{{x["uid"]}}</td>
+            <td>{{x["name"]}}</td>
+            <td>{{x["mobile"]}}</td>
+            <td>{{x["mail"]}}</td>
+            <td>{{x["ddate"]}}</td>
+            <td>{{x["method"]}}</td>
+            <td>{{x["address"]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br><br>
+
+<a href="/adminhome">Go Back</a>
+    </center>
+</body>
+</html>

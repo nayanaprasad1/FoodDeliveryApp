@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+    <style>
+        h1{
+            color: green;
+            font-family:roboto;
+            font-size:50px;
+            text-align: center;
+        }
+        body{
+            padding:20px;
+            margin:50px;
+            background-color:lightgreen;
+            font-family:roboto;
+            text-align: center;
+            font-size:30px;
+        }
+        a{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <h2>Users Record</h2>
+    <table border=5>
+        <thead>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Email</th>
+            <th>Contact Number</th>
+        </thead>
+        {% for x in rows %}
+        <tr>
+            <td>{{x["user_id"]}}</td>
+            <td>{{x["name"]}}</td>
+            <td>{{x["gender"]}}</td>
+            <td>{{x["email"]}}</td>
+            <td>{{x["phone"]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br><br>
+
+<a href="/adminhome">Go Back</a>
+    </center>
+</body>
+</html>
